@@ -1,0 +1,134 @@
+
+body{
+	background-color:black;
+}
+
+.vari1{
+	stop-color: black;
+}
+
+.vari2{
+	stop-color:yellow;
+}
+
+.vari3{
+	stop-color: black;
+}
+
+#skrolleri{
+	position:absolute;
+	bottom:calc(50% - 15px);
+	left:0%;
+	height:100px;
+	z-index:5;
+	overflow: hidden;
+}
+
+
+#lisays{
+	position:absolute;
+	top:0%;
+	right:0%;
+	z-index:20;
+}
+
+#janispaa{
+	position:absolute;
+	z-index:2;
+	animation-duration: 3s;
+	animation-name: paaanimaatio;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	
+}
+
+#janisruumis{
+	
+	position:absolute;
+	z-index:2;
+	animation-duration: 3s;
+	animation-name: ruumisanimaatio;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	
+}
+
+.pollo{
+	position: absolute;
+	z-index:3;
+	animation-duration: 5s;
+	animation-name: ympari;
+	/*animation-fill-mode: forwards;*/
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+
+.moire{
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	z-index:1;
+	animation-duration: 8s;
+	animation-name: ylosalas;
+	animation-fill-mode: backwards;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+
+@keyframes ympari {
+  
+  0%   { left: calc(0%); 		  top: calc(0%);}
+  25%  { left: calc(100% - 95px); top: calc(0%);}
+  50%  { left: calc(100% - 95px); top: calc(100% - 115px);}
+  75%  { left: calc(0%); 		  top: calc(100% - 115px);}
+  100% { left: calc(0%); 		  top: calc(0%);}
+}
+
+
+
+@keyframes paaanimaatio {
+  from {
+  
+	position: absolute;
+	top:calc(50vh - 300px);
+    left:calc(50vw - (383px / 2));
+  }
+
+  to {
+	
+	position: absolute;
+	top:calc(0vh);
+	left:calc(50vw - (383px / 2));
+  }
+}
+
+@keyframes ruumisanimaatio {
+  from {
+  
+	position: absolute;
+	
+    left: calc(50vw - (383px / 2));
+	bottom: calc(50vh - 300px);
+  }
+
+  to {
+	position: absolute;
+	
+    left: calc(50vw - (383px / 2));
+	bottom:calc(0vh);
+	
+  }
+}
+
+@keyframes ylosalas {
+	0%   {bottom: calc(0vh); left: calc(0%);}
+	50%  {bottom: calc(100vh); left: calc(0%);}
+	100% {bottom: calc(0vh); left: calc(0%);}
+}
+
+
+

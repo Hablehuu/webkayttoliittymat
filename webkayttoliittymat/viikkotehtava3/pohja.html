@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head><!-- head-osan sisältöä ei saa muuttaa -->
+        <script src="http://appro.mit.jyu.fi/tiea2120/vt/vt1/2019/data.js"></script>
+        <script src="vt3.js"></script>
+        <link rel="StyleSheet" href="tyylit.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8"/>
+        <title>Tulospalvelu</title>
+    </head>
+    <body><!-- Tämän tiedoston sisältöä saa muuttaa vapaasti tästä kommentista eteenpäin ! -->
+       <h1>Tulospalvelu</h1>
+<div id = "flex">
+
+<div id = "osa1">
+<ul id = "joukkueet">
+<!--
+	<li>joukkue1
+		<ul>
+			<li>nimi1</li>
+			<li>nimi2</li>
+		</ul>
+	</li>
+-->
+</ul>
+</div>
+
+
+
+
+<div id= "osa2">
+<form id= "lomake" action="kasittelija" method="post">
+
+<h2>Lisää joukkue</h2>
+<h3></h3>
+<fieldset>
+<legend>Joukkueen tiedot</legend>
+
+<p id= "nimi"><label>nimi<input id= "nimiInput" type="text" required="required" minlength="2"></label></p>
+
+<div class = "container">
+	<div class="box">
+		<label class="desc">leimaus</label>
+	</div> 
+	
+	<div class="box">
+		<!--
+		<div class="leima">
+			<input  type="checkbox" name="leimaus" value="gps">
+			<label for="gps">gps</label>
+		</div>
+		<div class="leima">
+			<input  type="checkbox" name="leimaus" value="nfc">
+			<label for="nfc">nfc</label>
+		-->
+		
+	</div>
+	
+</div>
+<div class = "container">
+	<div class="box">
+		<label class="desc">sarja</label>
+	</div>
+	
+	<div class="box">
+		<!--
+		<div class="leima">
+			<input  type="checkbox" name="leimaus" value="gps">
+			<label for="gps">gps</label>
+		</div>
+		<div class="leima">
+			<input  type="checkbox" name="leimaus" value="nfc">
+			<label for="nfc">nfc</label>
+		-->
+		
+	</div>
+	
+</div>
+
+</fieldset>
+
+<fieldset id="jasenet">
+<legend>Jäsenet</legend>
+<!--
+<p class= "jasen"><label>jäsen<input class= "jasenInput" type="text" ></label></p>
+<p class= "jasen"><label>jäsen<input class= "jasenInput" type="text" ></label></p>
+<p class= "jasen"><label>jäsen<input class= "jasenInput" type="text" ></label></p>
+<p class= "jasen"><label>jäsen<input class= "jasenInput" type="text" ></label></p>
+<p class= "jasen"><label>jäsen<input class= "jasenInput" type="text" ></label></p>
+-->
+</fieldset >
+
+
+<!--<button>tallenna</button>-->
+</form >
+<h4></h4>
+<form id="sarjaLomake" action="kasittelija" method="post">
+<fieldset>
+
+<legend>lisää sarja</legend>
+
+<p><label>nimi<input id= "sarjaNimi" type="text" required="required"></label></p>
+<p><label>kesto<input type="number" min="1" step="1" required="required" id="kesto"></label></p>
+<p><label>alkuaika<input type="datetime-local" id="alku"></label></p>
+<p><label>loppuaika<input type="datetime-local" id="loppu"></label></p>
+
+
+
+</fieldset>
+
+<button>tallenna</button>
+</form>
+</div>
+
+</div>
+
+
+
+
+<script src="http://appro.mit.jyu.fi/tools/htmlinspector/html-inspector.js"></script>
+<script>// yksinkertaisin tapa kutsua inspectoria on: HTMLInspector.inspect()
+window.addEventListener("load",  function() { HTMLInspector.inspect( {domRoot: "html",useRules: null,excludeRules: ["script-placement"],excludeElements: "svg",excludeSubTrees: ["svg","iframe"],onComplete: function(errors) { errors.forEach(function(error) {console.warn(error.message, error.context)})}} );});</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.11.0/jshint.js"></script>
+<script src="http://appro.mit.jyu.fi/tools/jshint/jshint.user.js"></script>
+</body>
+</html>
